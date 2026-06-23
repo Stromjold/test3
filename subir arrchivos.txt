@@ -1,0 +1,25 @@
+=== GUÍA RÁPIDA DE ACTUALIZACIÓN EN GITHUB ===
+
+1. PREPARAR LOS ARCHIVOS
+Comando: 
+git add .
+
+¿Qué significa?: 
+Le dice a Git que revise toda la carpeta actual (eso significa el punto ".") y prepare todos los archivos que tengan cambios, modificaciones o que sean totalmente nuevos. Es como meter todas las carpetas y scripts en una caja abierta.
+
+
+2. EMPAQUETAR Y ETIQUETAR
+Comando: 
+git commit -m "feat: integracion de soldados, rutas y diseno de HUD tactico"
+
+¿Qué significa?: 
+Cierra la caja y le pega una etiqueta con un mensaje. La parte "-m" significa "mensaje". Todo lo que va entre comillas es la descripción que verás en el historial de GitHub para saber exactamente qué cambios hiciste ese día.
+
+
+3. SUBIR A LA NUBE
+Comando: 
+git push origin main
+
+¿Qué significa?: 
+Toma esa caja cerrada ("commit") y la envía a través de internet a tu repositorio en GitHub ("origin") específicamente a la línea de tiempo principal de tu proyecto ("main"). 
+*(Nota: Si tu proyecto antiguo usa la palabra master, el comando sería: git push origin master).*
