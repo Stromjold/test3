@@ -4,7 +4,7 @@ Proyecto desarrollado en **Unity** con scripts en **C#**.
 
 ## Descripción
 
-Este repositorio contiene un proyecto de Unity configurado con varios paquetes y herramientas para desarrollo 2D, sistema de entrada, render pipeline universal (URP), timeline y otras utilidades de Unity.
+Este repositorio contiene un proyecto de Unity configurado con varios paquetes y herramientas para desarrollo 2D, sistema de entrada, render pipeline universal (URP), timeline y otras utilidades de desarrollo.
 
 ## Requisitos
 
@@ -32,6 +32,28 @@ git clone https://github.com/Stromjold/test3.git
 ### 3. Esperar la importación
 
 Unity importará automáticamente los archivos, paquetes y configuraciones del proyecto.
+
+### 4. Actualizar y subir cambios a GitHub
+
+```bash
+git add .
+git commit -m "feat: integracion de soldados, rutas y diseno de HUD tactico"
+git push origin main
+```
+
+**¿Qué significa cada comando?**
+
+1. **`git add .`**  
+   Le dice a Git que revise toda la carpeta actual y prepare todos los archivos que tengan cambios, modificaciones o que sean nuevos.
+
+2. **`git commit -m "..."`**  
+   Cierra la caja y le pega una etiqueta con un mensaje. Todo lo que va entre comillas queda guardado en el historial de Git para identificar los cambios.
+
+3. **`git push origin main`**  
+   Toma ese commit y lo envía a GitHub al repositorio remoto llamado `origin`, específicamente a la rama `main`.
+
+   > **Nota:** Si tu proyecto usa la rama `master`, usa:
+   > `git push origin master`
 
 ## Uso
 
