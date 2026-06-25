@@ -4,7 +4,7 @@ Proyecto desarrollado en **Unity** con scripts en **C#**.
 
 ## Descripción
 
-Este repositorio contiene un proyecto de Unity configurado con varios paquetes y herramientas para desarrollo 2D, sistema de entrada, render pipeline universal (URP), timeline y otras utilidades de desarrollo.
+Creación de videojuego de tierra de nadie, el videojuego es un tower defence que se centra en eliminar a los objetivos que estan en el mapa
 
 ## Requisitos
 
