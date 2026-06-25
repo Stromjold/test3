@@ -16,44 +16,67 @@ Para abrir y ejecutar el proyecto necesitas:
 
 ## Instalación
 
-### 1. Clonar el repositorio
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Stromjold/test3.git
+   cd test3
+   ```
+
+2. (Opcional) Verifica que estás en `main`:
+   ```bash
+   git checkout main
+   ```
+
+3. Antes de subir cambios, sincroniza con remoto:
+   ```bash
+   git pull --rebase origin main
+   ```
+
+4. Agrega y confirma tus cambios:
+   ```bash
+   git add .
+   git commit -m "feat: actualización de documentación"
+   ```
+
+5. Sube los cambios:
+   ```bash
+   git push origin main
+   ```
+
+### Si aparece el error `! [rejected] main -> main (fetch first)`
+
+Ese error significa que `origin/main` tiene commits que no están en tu copia local.  
+Solución recomendada:
 
 ```bash
-git clone https://github.com/Stromjold/test3.git
-```
-
-### 2. Abrir el proyecto en Unity Hub
-
-1. Abre **Unity Hub**
-2. Selecciona **Add project from disk**
-3. Elige la carpeta del repositorio clonado
-4. Asegúrate de usar la versión **6000.5.0f1**
-
-### 3. Esperar la importación
-
-Unity importará automáticamente los archivos, paquetes y configuraciones del proyecto.
-
-### 4. Actualizar y subir cambios a GitHub
-
-```bash
-git add .
-git commit -m "feat: se agrega el mensaje para explicar los cambios puestos"
+git pull --rebase origin main
 git push origin main
 ```
 
-**¿Qué significa cada comando?**
+### Si hay conflictos durante el rebase
 
-1. **`git add .`**  
-   Le dice a Git que revise toda la carpeta actual y prepare todos los archivos que tengan cambios, modificaciones o que sean nuevos.
+1. Revisa archivos en conflicto:
+   ```bash
+   git status
+   ```
+2. Resuelve conflictos y guarda.
+3. Continúa el rebase:
+   ```bash
+   git add .
+   git rebase --continue
+   ```
+4. Vuelve a intentar el push:
+   ```bash
+   git push origin main
+   ```
 
-2. **`git commit -m "..."`**  
-   Cierra la caja y le pega una etiqueta con un mensaje. Todo lo que va entre comillas queda guardado en el historial de Git para identificar los cambios.
+### Consejo de seguridad (backup rápido)
 
-3. **`git push origin main`**  
-   Toma ese commit y lo envía a GitHub al repositorio remoto llamado `origin`, específicamente a la rama `main`.
+Antes de hacer rebase, puedes crear una rama de respaldo:
 
-   > **Nota:** Si tu proyecto usa la rama `master`, usa:
-   > `git push origin master`
+```bash
+git branch backup-local-main
+```
 
 ## Uso
 
