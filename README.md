@@ -78,6 +78,34 @@ Antes de hacer rebase, puedes crear una rama de respaldo:
 git branch backup-local-main
 ```
 
+## Cómo abrir este proyecto en Unity
+
+Sigue estos pasos para abrir el proyecto desde este repositorio:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Stromjold/test3.git
+   ```
+
+2. Abre **Unity Hub**.
+
+3. Haz clic en **Add** / **Agregar proyecto** y selecciona la carpeta `test3`.
+
+4. Verifica que la carpeta seleccionada sea la raíz del proyecto (debe contener, por ejemplo, `Assets` y `ProjectSettings`).
+
+5. Si Unity Hub pide versión, usa la versión indicada en:
+   `ProjectSettings/ProjectVersion.txt`
+
+6. Haz clic en **Open** para abrir el proyecto.
+
+---
+
+### Notas
+
+- La primera apertura puede tardar varios minutos mientras Unity importa recursos y compila scripts.
+- Si aparece un error de versión de Unity, instala la versión recomendada en `ProjectVersion.txt` e inténtalo de nuevo.
+- Si faltan carpetas como `Assets` o `ProjectSettings`, es posible que el repositorio no contenga un proyecto Unity completo.
+
 ## Uso
 
 Una vez abierto el proyecto:
