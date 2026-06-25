@@ -37,7 +37,7 @@ Unity importará automáticamente los archivos, paquetes y configuraciones del p
 
 ```bash
 git add .
-git commit -m "feat: integracion de soldados, rutas y diseno de HUD tactico"
+git commit -m "feat: se agrega el mensaje para explicar los cambios puestos"
 git push origin main
 ```
 
