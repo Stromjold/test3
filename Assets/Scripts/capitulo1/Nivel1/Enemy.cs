@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 200f;
     
     [Header("Resistencia")]
     public int health = 5; // La cantidad de balas que resiste el mutante
