@@ -69,6 +69,31 @@ git push origin main
    ```bash
    git push origin main
    ```
+### Error: `non-fast-forward` al hacer `git push`
+
+**Mensaje observado:**
+`! [rejected] main -> main (non-fast-forward)`
+
+**Qué significa:**  
+La rama remota (`origin/main`) tenía commits que no estaban en tu copia local.  
+Git bloqueó el push para evitar sobreescribir cambios existentes.
+
+**Impacto en mi trabajo:**  
+✅ No se perdió ni se modificó mi trabajo local.  
+Mis cambios (`feat: cambios en las municiones y enemigo`) siguieron intactos.
+
+**Qué lo resolvió:**
+1. `git pull origin main`  
+   - Se descargó y fusionó un archivo remoto nuevo:  
+   `Documentacion/Bitacora_Proyecto_DVLM–GDD_AVANCES_28-06-2026.docx`
+   - Merge automático con estrategia `ort` (sin conflictos).
+2. `git push origin main`  
+   - Push exitoso con todo sincronizado.
+
+**Conclusión:**  
+El error fue de sincronización de historial, no de código.  
+Al final, quedaron en `main` tanto mis cambios como el archivo remoto.
+
 
 ### Consejo de seguridad (backup rápido)
 
