@@ -2,18 +2,22 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 200f;
+    public float speed = 10000f;
     
     [Header("Resistencia")]
     public int health = 5; // La cantidad de balas que resiste el mutante
 
     private Transform target;
     private int waypointIndex = 0;
-
+    
     void Start()
     {
-        if (Waypoints.points == null || Waypoints.points.Length == 0) return;
-        target = Waypoints.points[0];
+        // Verificamos que existan puntos suficientes en la ruta
+        if (Waypoints.points == null || Waypoints.points.Length <= 1) return;
+        
+        // Le indicamos que su primer objetivo real es el Punto_1
+        waypointIndex = 1; 
+        target = Waypoints.points[waypointIndex];
     }
 
     void Update()
@@ -23,7 +27,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.2f)
+        if (Vector3.Distance(transform.position, target.position) <= 0.2f) 
         {
             GetNextWaypoint();
         }
