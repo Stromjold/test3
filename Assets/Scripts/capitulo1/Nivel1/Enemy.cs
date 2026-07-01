@@ -58,7 +58,9 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        // Aquí más adelante puedes poner una animación o efecto de sangre
+        // Le avisamos al  paneel que suba el punto del enemigo caido
+        GameManager.instance.RegistrarMuerte();
+        // Destruccion del clon
         Destroy(gameObject);
     }
 }
